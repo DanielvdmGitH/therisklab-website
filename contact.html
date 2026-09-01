@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | The Risk Lab</title>
+<meta name="description" content="Tell us what is happening, and we will help you determine the most practical next step. No obligation, no standard sales pitch.">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Risk Lab">
+<meta property="og:title" content="Contact | The Risk Lab">
+<meta property="og:description" content="Tell us what is happening, and we will help you determine the most practical next step. No obligation, no standard sales pitch.">
+<meta property="og:image" content="https://therisklab.ai/assets/og-image.jpg">
+<meta property="og:url" content="https://therisklab.ai/contact.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Contact | The Risk Lab">
+<meta name="twitter:description" content="Tell us what is happening, and we will help you determine the most practical next step. No obligation, no standard sales pitch.">
+<meta name="twitter:image" content="https://therisklab.ai/assets/og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="canonical" href="https://therisklab.ai/contact.html">
+<link rel="stylesheet" href="style.css?v=4">
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <a class="brand" href="index.html"><img src="assets/logo-horizontal.svg" alt="The Risk Lab"></a>
+    <div class="nav-links" id="navLinks">
+      <a class="nl" href="about.html" onclick="closeMenu()">About</a>
+      <a class="nl" href="services.html" onclick="closeMenu()">Services</a>
+      <a class="nl" href="clients.html" onclick="closeMenu()">Clients</a>
+      <a class="nl" href="/insights/" onclick="closeMenu()">Insights</a>
+      <a class="nl active" href="contact.html" onclick="closeMenu()">Contact</a>
+      <a class="btn" href="contact.html">Get in Touch</a>
+    </div>
+    <button class="menu-toggle" id="menuToggle" onclick="toggleMenu()" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">&#9776;</button>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow">CONTACT</span>
+    <h1>Where does your business need greater confidence?</h1>
+    <p>You may be concerned about a critical process, an unresolved finding, an emerging risk or whether your controls are keeping pace with growth. Tell us what is happening, and we will help you determine the most practical next step.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <form class="contact-form reveal" name="contact" method="POST" action="/thank-you.html" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="contact">
+      <input type="hidden" name="subject" value="New website enquiry from The Risk Lab site">
+      <p class="hp-field"><label>Don't fill this out: <input name="bot-field"></label></p>
+
+      <div class="form-row">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-row">
+        <label for="company">Company</label>
+        <input type="text" id="company" name="company" required>
+      </div>
+      <div class="form-row">
+        <label for="email">Email address</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-row">
+        <label for="phone">Phone number</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+      <div class="form-row">
+        <label for="message">What would you like help with?</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+      <div class="hero-ctas">
+        <button type="submit" class="btn pink" style="border:2px solid var(--pink);cursor:pointer;">Start the conversation</button>
+      </div>
+      <p class="form-note">There is no obligation and no standard sales pitch. The initial conversation is simply an opportunity to understand the issue and assess whether The Risk Lab can help.</p>
+    </form>
+
+    <div class="cta-contacts reveal" style="margin-top:44px;">
+      <a href="tel:+27837098414">+27 83 709 8414</a>
+      <a href="mailto:info@therisklab.ai">info@therisklab.ai</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a class="fbrand" href="index.html"><img src="assets/logo-horizontal.svg" alt="The Risk Lab"></a>
+    <small>&copy; 2026 The Risk Lab. Risk management and internal audit.</small>
+  </div>
+</footer>
+
+<script src="script.js?v=4"></script>
+</body>
+</html>

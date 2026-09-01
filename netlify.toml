@@ -1,0 +1,68 @@
+[[redirects]]
+  from = "http://therisklab.co/*"
+  to = "https://therisklab.ai/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://therisklab.co/*"
+  to = "https://therisklab.ai/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.therisklab.co/*"
+  to = "https://therisklab.ai/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.therisklab.co/*"
+  to = "https://therisklab.ai/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/insights.html"
+  to = "/insights/how-to-build-a-risk-register/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/about"
+  to = "/about.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services"
+  to = "/services.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/clients"
+  to = "/clients.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/contact"
+  to = "/contact.html"
+  status = 301
+  force = true
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+[[headers]]
+  for = "/style.css"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+
+[[headers]]
+  for = "/script.js"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"

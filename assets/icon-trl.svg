@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" version="1.1">
+  <rect x="0" y="0" width="100" height="100" rx="18" ry="18" fill="#2C2C2C" id="icon-bg" />
+  <g id="trl-mark">
+    <path fill="#ffd700" d="M127 600H12V700H352V600H237V0H127Z" transform="translate(14.0000,72.6823) scale(0.064806,-0.064806)" />
+      <path fill="#ffd700" d="M41 700H204Q289 700 328.0 660.5Q367 621 367 539V496Q367 387 295 358V356Q335 344 351.5 307.0Q368 270 368 208V85Q368 55 370.0 36.5Q372 18 380 0H268Q262 17 260.0 32.0Q258 47 258 86V214Q258 262 242.5 281.0Q227 300 189 300H151V0H41ZM191 400Q224 400 240.5 417.0Q257 434 257 474V528Q257 566 243.5 583.0Q230 600 201 600H151V400Z" transform="translate(37.5896,72.6823) scale(0.064806,-0.064806)" />
+      <path fill="#ffd700" d="M41 700H151V100H332V0H41Z" transform="translate(63.7066,72.6823) scale(0.064806,-0.064806)" />
+  </g>
+</svg>
