@@ -24,7 +24,7 @@
 
 [[redirects]]
   from = "/insights.html"
-  to = "/insights/how-to-build-a-risk-register/"
+  to = "/insights/"
   status = 301
   force = true
 
