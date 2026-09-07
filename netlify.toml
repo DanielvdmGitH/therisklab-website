@@ -1,26 +1,9 @@
-[[redirects]]
-  from = "http://therisklab.co/*"
-  to = "https://therisklab.ai/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "https://therisklab.co/*"
-  to = "https://therisklab.ai/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "http://www.therisklab.co/*"
-  to = "https://therisklab.ai/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "https://www.therisklab.co/*"
-  to = "https://therisklab.ai/:splat"
-  status = 301
-  force = true
+# therisklab.ai - Netlify configuration
+#
+# The therisklab.co -> therisklab.ai permanent redirect is NOT configured here.
+# Host-based `from` patterns never match: Netlify canonicalises the request to the
+# site's primary domain before the redirect engine runs. It lives in
+# netlify/edge-functions/legacy-domain-redirect.js instead.
 
 [[redirects]]
   from = "/insights.html"
