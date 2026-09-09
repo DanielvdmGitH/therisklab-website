@@ -80,3 +80,47 @@
 .checklist.cols-3{max-width:none;grid-template-columns:repeat(3,1fr);}
 @media (max-width:900px){.checklist.cols-3{grid-template-columns:1fr 1fr;}}
 @media (max-width:680px){.checklist.cols-3{grid-template-columns:1fr;}}
+
+/* ---------- TWO-ROW LOGO MARQUEE ----------
+   Two independent rows so more marks are visible at a glance, especially on
+   mobile. Row 2 runs the opposite direction at a different speed and starts
+   from a rotated order, so the two rows never show the same pair side by side.
+   Row 2 is decorative duplication - it is aria-hidden in the markup. */
+.logo-marquee-stack{display:flex;flex-direction:column;gap:14px;}
+.logo-marquee-stack .logo-marquee{padding:0;}
+
+.logo-marquee__track--reverse{
+  animation-name:logo-scroll-rev;
+  animation-duration:62s;
+}
+@keyframes logo-scroll-rev{
+  from{transform:translate3d(0,0,0);}
+  to{transform:translate3d(-50%,0,0);}
+}
+
+@media (max-width:680px){
+  .logo-marquee-stack{gap:10px;}
+}
+
+@media (prefers-reduced-motion:reduce){
+  /* one static wrapped row is enough; hide the decorative second row */
+  .logo-marquee-stack .logo-marquee + .logo-marquee{display:none;}
+}
+
+/* ---------- AI SECTION COPY ALIGNMENT ----------
+   style.css sets `.foundations p{max-width:520px}` for the two-column
+   .foundations-grid layout. Inside the centred .text-block (760px) that leaves
+   each paragraph flush-left in its 520px box - visibly ~120px left of the
+   heading on desktop. It only shows above 520px, which is why mobile looked
+   right. Centre the measure without changing it. */
+.foundations .text-block p{margin-left:auto;margin-right:auto;}
+
+/* ---------- HERO LOGO: STACKED LOCKUP ----------
+   The hero now uses the Core Stacked With Descriptor lockup (aspect 1.78)
+   rather than the horizontal one (2.84), so the widths are retuned to keep the
+   hero balanced. Both stay well above the guide's 130px minimum for the
+   with-descriptor lockup. */
+.hero-logo{max-width:300px;}
+@media (max-width:680px){
+  .hero-logo{max-width:210px;}
+}
