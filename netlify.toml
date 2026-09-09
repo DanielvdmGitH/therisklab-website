@@ -38,7 +38,11 @@
 [[headers]]
   for = "/assets/*"
   [headers.values]
-    Cache-Control = "public, max-age=2592000"
+    # 1 hour hard cache, then revalidate. Was max-age=2592000 (30 days) with no
+    # revalidation, which meant replacing an asset in place under the same
+    # filename left returning visitors on the old file for up to a month.
+    # Netlify sends ETags, so revalidation is a cheap 304.
+    Cache-Control = "public, max-age=3600, must-revalidate"
 
 [[headers]]
   for = "/style.css"
