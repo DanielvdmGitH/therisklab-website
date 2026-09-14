@@ -116,11 +116,23 @@
 .foundations .text-block p{margin-left:auto;margin-right:auto;}
 
 /* ---------- HERO LOGO: STACKED LOCKUP ----------
-   The hero now uses the Core Stacked With Descriptor lockup (aspect 1.78)
-   rather than the horizontal one (2.84), so the widths are retuned to keep the
-   hero balanced. Both stay well above the guide's 130px minimum for the
-   with-descriptor lockup. */
-.hero-logo{max-width:300px;}
+   The hero uses the Core Stacked With Descriptor lockup (aspect 1.78) rather
+   than the horizontal one (2.84), so the widths are tuned to keep the hero
+   balanced.
+
+   Sized for descriptor legibility, not just the guide's 130px floor. The
+   descriptor is letterspaced caps and its cap height scales with the lockup:
+   259px -> 6-8px caps (too small to read), 320px -> 9px, 420px -> 11px.
+   Guide p.10 requires the descriptor stay "fully readable at the size used".
+
+   `width:100%` is load-bearing. The SVG carries intrinsic dimensions of
+   259x146, so with max-width alone it caps at 259px and never reaches the
+   width it is allowed.
+
+   margin-bottom satisfies the guide p.11 clear-space rule (0.5X, where X is
+   the sturgeon icon height at the size in use): sturgeon is 68px at 420px
+   -> 34px required, and 52px at 320px -> 26px required. */
+.hero-logo{width:100%;max-width:420px;margin:0 auto 40px;}
 @media (max-width:680px){
-  .hero-logo{max-width:210px;}
+  .hero-logo{max-width:320px;margin:0 auto 30px;}
 }

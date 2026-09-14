@@ -1,9 +1,13 @@
 # therisklab.ai - Netlify configuration
 #
-# The therisklab.co -> therisklab.ai permanent redirect is NOT configured here.
-# Host-based `from` patterns never match: Netlify canonicalises the request to the
-# site's primary domain before the redirect engine runs. It lives in
-# netlify/edge-functions/legacy-domain-redirect.js instead.
+# The therisklab.co -> therisklab.ai permanent 301 is NOT configured here, and
+# cannot be. Host-based `from` patterns never match: Netlify canonicalises the
+# request to the site's primary domain before the redirect engine runs, and before
+# edge functions run. A .co request never reaches this site at all.
+#
+# It is handled by a separate Netlify project, `therisklab-co-redirect`, which holds
+# the domain and a single rule: /*  https://therisklab.ai/:splat  301!
+# Confirmed 301 by curl on 8 Sep 2026. See claude_domain-migration-301-fix-how-to-apply.md.
 
 [[redirects]]
   from = "/insights.html"
