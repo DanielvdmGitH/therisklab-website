@@ -51,9 +51,13 @@
 [[headers]]
   for = "/style.css"
   [headers.values]
-    Cache-Control = "public, max-age=3600"
+    # must-revalidate matters here. style.css changes in lockstep with the markup,
+    # so a cached copy renders new HTML against old rules — which is exactly what
+    # happened on 15 Sep when the ?v= string was not bumped. Netlify sends ETags,
+    # so revalidation costs a 304.
+    Cache-Control = "public, max-age=3600, must-revalidate"
 
 [[headers]]
   for = "/script.js"
   [headers.values]
-    Cache-Control = "public, max-age=3600"
+    Cache-Control = "public, max-age=3600, must-revalidate"
